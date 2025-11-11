@@ -128,25 +128,27 @@ GCN_paras = {
 
 
 
-results =  run_STDISTAL(paths,
-                      load_test_groundtruth = False,
-                      use_marker_genes = True,
-                      external_genes = False,
-                      find_marker_genes_paras = find_marker_genes_paras,
-                      generate_new_pseudo_spots = True, 
-                      pseudo_spot_simulation_paras = pseudo_spot_simulation_paras,
-                      data_normalization_paras = data_normalization_paras,
-                      integration_for_adj_paras = integration_for_adj_paras,
-                      inter_exp_adj_paras = inter_exp_adj_paras,
-                      spatial_adj_paras = spatial_adj_paras,
-                      real_intra_exp_adj_paras = real_intra_exp_adj_paras,
-                      pseudo_intra_exp_adj_paras = pseudo_intra_exp_adj_paras,
-                      integration_for_feature_paras = integration_for_feature_paras,
-                      GCN_paras = GCN_paras,
-                      fraction_pie_plot = True,
-                      cell_type_distribution_plot = True,
-                      n_jobs = -1, 
-                      GCN_device = 'GPU'
-                     )
+if __name__ == "__main__":
 
-results.write_h5ad(paths['output_path']+'/results.h5ad')
+    results =  run_STDISTAL(paths,
+                        load_test_groundtruth = False,
+                        use_marker_genes = True,
+                        external_genes = False,
+                        find_marker_genes_paras = find_marker_genes_paras,
+                        generate_new_pseudo_spots = True, 
+                        pseudo_spot_simulation_paras = pseudo_spot_simulation_paras,
+                        data_normalization_paras = data_normalization_paras,
+                        integration_for_adj_paras = integration_for_adj_paras,
+                        inter_exp_adj_paras = inter_exp_adj_paras,
+                        spatial_adj_paras = spatial_adj_paras,
+                        real_intra_exp_adj_paras = real_intra_exp_adj_paras,
+                        pseudo_intra_exp_adj_paras = pseudo_intra_exp_adj_paras,
+                        integration_for_feature_paras = integration_for_feature_paras,
+                        GCN_paras = GCN_paras,
+                        fraction_pie_plot = True,
+                        cell_type_distribution_plot = True,
+                        n_jobs = -1, 
+                        GCN_device = 'GPU'
+                        )
+
+    results.write_h5ad(paths['output_path']+'/results.h5ad')
