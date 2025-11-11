@@ -21,9 +21,11 @@ Output directory for predictions and results.
 ```
 
 pip install -r requirements.txt
+
 ```
 **2. Run the Model**
 ```
+mkdir output
 python run.py
 ```
 
