@@ -9,7 +9,31 @@ This repository contains the implementation of **ST-DISTAL**, a framework for ac
 Implementation of the dual-branch GCN and the training logic. Code sections are annotated with corresponding equation numbers from the paper for clarity.
 
 `./data/`
-Contains a representative subset of the seqFISH+ dataset used for demonstration and testing.
+Contains a representative dataset.
 
 `./output/`
 Output directory for predictions and results.
+
+
+## Usage
+
+**1. Install Dependencies**
+```
+bash
+pip install -r requirements.txt
+```
+**2. Run the Model**
+```
+python run.py
+```
+
+The model output will be saved in ./output/predict_result.csv.
+
+Each row corresponds to a spatial spot; columns represent cell types; values indicate predicted cell-type proportions.
+
+**3. Evaluate Results**
+
+An evaluation script is provided:
+```
+python eval.py
+```
